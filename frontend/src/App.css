@@ -981,4 +981,59 @@ hr {
     justify-content:center;
   }
 
+  .loginCard {
+    width: 350px;
+    
+  }
+
+  .registerCard{
+    width:350px;
+  }
+
+  .forgetPasswordCard{
+    width:350px;
+  }
+
+  .productDetails .details .btn-cart{
+    padding: 5px 10%;
+    margin-top: 15px;
+  }
+
+  .userDetails {
+    display: block;
+    
+  }
+  
+  .userDetails img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: block;
+    margin:0 auto;
+  }
+  .userDetails .avatar-btn{
+    margin:0 auto;
+    width:100%;
+  }
+  .userDetails .Details {
+    text-align: center;
+    margin-left: 0;
+  }
+  .userDetails .Details h4 {
+    color: rgb(172, 172, 172);
+    margin-top: 30px;
+  }
+  .userDetails .Details p {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+
+  .changePasswordCard{
+    width:350px;
+  }
+
+  .updateCard{
+    width:350px;
+  }
+
 }
