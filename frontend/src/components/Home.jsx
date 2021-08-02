@@ -61,91 +61,92 @@ const Home = ({ match }) => {
       {loading ? (
         <Loader />
       ) : (
-        <section className="products mt-5 mb-5 px-5">
-          <h1 className="mb-5">Latest Products</h1>
-          {match.params.keyword ? (
-            <div className="slider-flex">
-              <div className="slider">
-                <Range
-                  min={1}
-                  max={1000}
-                  marks={{
-                    1: "$1",
-                    1000: "$1000",
-                  }}
-                  tipFormatter={(value) => `$${value}`}
-                  tipProps={{
-                    placement: "top",
-                    visible: true,
-                  }}
-                  value={price}
-                  onChange={(value) => {
-                    setPrice(value);
-                  }}
-                />
-                <hr className="mt-5" />
-                <h4>Categories</h4>
-                <ul className="p-0 categories">
-                  {categories.map((category) => (
-                    <li
-                      style={{ cursor: "pointer" }}
-                      onClick={(handleCategory) => setCategory(category)}
-                    >
-                      {category}
-                    </li>
-                  ))}
-                </ul>
+        
+      <section className="products mt-5 mb-5 px-5">
+        <h1 className="mb-5">Latest Products</h1>
+        {match.params.keyword ? (
+          <div className="slider-flex">
+            <div className="slider">
+              <Range
+                min={1}
+                max={1000}
+                marks={{
+                  1: "$1",
+                  1000: "$1000",
+                }}
+                tipFormatter={(value) => `$${value}`}
+                tipProps={{
+                  placement: "top",
+                  visible: true,
+                }}
+                value={price}
+                onChange={(value) => {
+                  setPrice(value);
+                }}
+              />
+              <hr className="mt-5" />
+              <h4>Categories</h4>
+              <ul className="p-0 categories">
+                {categories.map((category) => (
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={(handleCategory) => setCategory(category)}
+                  >
+                    {category}
+                  </li>
+                ))}
+              </ul>
 
-                <hr className="mt-5" />
-                <h4>Ratings</h4>
-                <ul className="p-0 ratings">
-                  {[5, 4, 3, 2, 1, 0].map((rating) => (
-                    <li
-                      style={{ cursor: "pointer" }}
-                      onClick={(handleRating) => setRating(rating)}
-                    >
-                      <div className="rating-outer">
-                        <div
-                          className="rating-inner"
-                          style={{ width: `${(rating / 5) * 100}%` }}
-                        ></div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="slider-products row row-cols-2 g-3">
-                {products &&
-                  products.map((product) => <Product product={product} />)}
-              </div>
+              <hr className="mt-5" />
+              <h4>Ratings</h4>
+              <ul className="p-0 ratings">
+                {[5, 4, 3, 2, 1, 0].map((rating) => (
+                  <li
+                    style={{ cursor: "pointer" }}
+                    onClick={(handleRating) => setRating(rating)}
+                  >
+                    <div className="rating-outer">
+                      <div
+                        className="rating-inner"
+                        style={{ width: `${(rating / 5) * 100}%` }}
+                      ></div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ) : (
-            <div className="row row-cols-md-3 g-3 row-cols-1">
+
+            <div className="slider-products row row-cols-1 row-cols-md-2 g-3">
               {products &&
                 products.map((product) => <Product product={product} />)}
             </div>
-          )}
+          </div>
+        ) : (
+          <div className="row row-cols-md-3 g-3 row-cols-1">
+            {products &&
+              products.map((product) => <Product product={product} />)}
+          </div>
+        )}
 
-          {productPerPage < productCount && (
-            <Pagination
-              activePage={curPage}
-              itemsCountPerPage={productPerPage}
-              totalItemsCount={productCount}
-              pageRangeDisplayed={5}
-              onChange={handlePageChange} // pass pageNumber by default
-              prevPageText="Prev"
-              nextPageText="Next"
-              firstPageText="First"
-              lastPageText="Last"
-              innerClass="d-flex justify-content-center pagination  mt-5" //ul
-              itemClass="page-item" //li
-              activeClass="page-item active" //li active
-              linkClass="page-link text-secondary" // a
-              activeLinkClass="text-light border-0 bg-warning" // a active
-            />
-          )}
-        </section>
+        {productPerPage < productCount && (
+          <Pagination
+            activePage={curPage}
+            itemsCountPerPage={productPerPage}
+            totalItemsCount={productCount}
+            pageRangeDisplayed={5}
+            onChange={handlePageChange} // pass pageNumber by default
+            prevPageText="Prev"
+            nextPageText="Next"
+            firstPageText="First"
+            lastPageText="Last"
+            innerClass="d-flex justify-content-center pagination  mt-5" //ul
+            itemClass="page-item" //li
+            activeClass="page-item active" //li active
+            linkClass="page-link text-secondary" // a
+            activeLinkClass="text-light border-0 bg-warning" // a active
+          />
+        )}
+      </section>
       )}
     </>
   );

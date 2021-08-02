@@ -892,6 +892,20 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+  .slider-flex {
+    display: block;
+  }
+  
+  .slider-flex .slider {
+    flex: 0.3;
+    margin-right: 30px;
+    padding: 20px;
+  }
+  
+  /* .slider-flex .slider-products {
+    display:block;
+    width:100%;
+  } */
   .navbar-brand {
     width: 20px;
   }
