@@ -944,3 +944,27 @@ hr {
   }
 
 }
+
+@media screen and (max-width: 500px) {
+  .navbar-brand {
+    width: 20px;
+  }
+
+  .search{
+    width:100px;
+    margin-right: -40px;
+  }
+
+
+ 
+  .table{
+    font-size:6px;
+  }
+  .table .btn{
+    width:25px;
+    height:25px;
+    display: flex;
+    justify-content:center;
+  }
+
+}
