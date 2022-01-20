@@ -6,9 +6,6 @@
 > Users could place order, get order details, their orders while admins can get all orders, delete order and update order status.
 > This Web App is deployed on Heroku(https://e-commercial-tianao.herokuapp.com/), and it is responsive on small width devices such like IphoneX and Iphone8P.
 
-# ChatApp
-•	This project is a chat web app like messenger achieving real-time text chat, reaction and video chat
-
 ## Table of contents
 * [General info](#General-info)
 * [Technologies](#Technologies)
