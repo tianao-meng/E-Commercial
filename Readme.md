@@ -55,7 +55,7 @@
 <p>
 10. User Profile.
 <p align="center">
-<img src='Images/userProfile.png' width='900' height='480' />
+<img src='Images/userProfile.jpeg' width='900' height='480' />
 <p>
 11. Edit User Profile.
 <p align="center">
@@ -83,7 +83,7 @@
 <p>
 17. User List.
 <p align="center">
-<img src='Images/userList.png' width='900' height='480' />
+<img src='Images/userList.jpeg' width='900' height='480' />
 <p>
 18. Admin Reviews.
 <p align="center">
